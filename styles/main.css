@@ -1,0 +1,95 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h3 {
+  font-family: "Sintony", sans-serif;
+  font-weight: 300;
+  font-size: calc(30px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+div {
+  font-family: "Cantarell", sans-serif;
+}
+
+.level2 {
+  height: 30vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 10fr 4fr;
+      grid-template-columns: 10fr 4fr;
+}
+
+.level2 div {
+  background-color: #f2a5a4;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.level2 h3 {
+  width: 100%;
+  margin: 0;
+}
+
+.level3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.45fr 0.61fr 0.75fr;
+      grid-template-columns: 1fr 0.45fr 0.61fr 0.75fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+  padding: 5vh 5vw;
+      grid-template-areas: "sec1 sec1 sec0 sec2" "sec3 sec0 sec4 sec4" "sec5 sec0 sec0 sec0";
+}
+
+.level3 a {
+  background-color: lightcoral;
+}
+
+.level3 .sec1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sec1;
+}
+
+.level3 .sec2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: sec2;
+}
+
+.level3 .sec3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sec3;
+}
+
+.level3 .sec4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: sec4;
+}
+
+.level3 .sec5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: sec5;
+}
+/*# sourceMappingURL=main.css.map */
