@@ -1,0 +1,222 @@
+// The Variables!!
+$lightBlue: #A8DADC;
+$textColor: #1D3557;
+
+
+
+body {
+  height: 96vh;
+  margin: 0;
+  padding: 2vh 2vw;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: calc(35px + (100 - 40) * ((100vw - 300px) / (1600 - 300)));
+  margin-top: 0;
+  color: $textColor;
+}
+
+h3 {
+  font-family: "Sintony", sans-serif;
+  font-weight: 300;
+  font-size: calc(25px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
+  color: $textColor;
+}
+
+div {
+  font-family: "Cantarell", sans-serif;
+  color: $textColor;
+}
+
+.level2 {
+  height: 30vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 10fr 4fr;
+
+  div {
+    background-color: lightcoral;
+    background-image: url(../imgs/KauaiSeniorPortraits-55.JPG);
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    background-size: cover;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: -40%;
+  }
+
+  h3 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.level3 {
+  display: grid;
+  grid-template-columns: 34vw 12vw 6vw 38vw;
+  grid-template-rows: 11vh 11vh 11vh;
+  grid-gap: 2vw;
+  padding: 5vh 5vw;
+  grid-template-areas: "sec1 sec1 sec1 sec2""sec3 nil sec4 sec4""sec5 sec5 empty empty";
+  padding: 0;
+  justify-content: space-evenly;
+
+  a {
+    background-color: $lightBlue;
+    color: $textColor;
+    border-radius: 65px;
+    height: 100%;
+    text-decoration: none;
+    width: max-content;
+    text-align: center;
+
+    h5 {
+      font-size: calc(30px + (50 - 30) * ((100vw - 300px) / (1600 - 300)));
+      margin: 0;
+      margin-top: 10px;
+      font-weight: 500;
+      padding: 0 50px;
+      font-family: 'Sintony';
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .sec#{$i} {
+      grid-area: sec#{$i};
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .level2 {
+    height: 30vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10fr 4fr;
+
+    div {
+      background-color: lightgoldenrodyellow;
+      width: 25vw;
+      height: 25vw;
+      border-radius: 50%;
+      align-self: center;
+      margin-top: -20%;
+      background-size: 200%;
+      background-position: 47% 30%;
+    }
+
+    h3 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .level3 {
+    display: grid;
+    grid-template-columns: 34vw 12vw 6vw;
+    grid-template-rows: 11vh 11vh 11vh;
+    grid-gap: 2vw;
+    padding: 5vh 5vw;
+    grid-template-areas: "sec1 sec1 sec1 sec2""sec3 nil sec4 sec4""sec5 sec5 empty empty";
+    padding: 0;
+    justify-content: space-evenly;
+
+    a {
+      background-color: $lightBlue;
+      color: $textColor;
+      border-radius: 65px;
+      height: max-content;
+      text-decoration: none;
+      width: max-content;
+      text-align: center;
+
+      h5 {
+        font-size: calc(10px + (55 - 30) * ((100vw - 300px) / (1000 - 300)));
+        margin: 0;
+        margin-top: 10px;
+        font-weight: 500;
+        padding: 0 30px;
+        font-family: 'Sintony';
+        padding-bottom: 10px;
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .sec#{$i} {
+        grid-area: sec#{$i};
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+  .level2 {
+    height: 30vh;
+    display: grid;
+    grid-template-rows: 20vh 5vh;
+    grid-template-columns: 100%;
+    grid-template-areas: "pic""txt";
+
+    div {
+      background-color: lightgreen;
+      width: 25vw;
+      height: 25vw;
+      border-radius: 50%;
+      align-self: center;
+      margin-top: -10%;
+      grid-area: pic;
+      margin-left: 36.5vw;
+    }
+
+    h3 {
+      width: 100%;
+      margin: 0;
+      grid-area: txt;
+      text-align: center;
+    }
+  }
+
+  .level3 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 34vw 12vw 6vw;
+    grid-template-rows: 11vh 11vh 11vh 11vh 11vh;
+    grid-gap: 2vw;
+    grid-template-areas: "sec1 sec1 sec1""sec2 sec2 sec2""sec3 sec3 sec3""sec4 sec4 sec4""sec5 sec5 sec5";
+    padding: 0;
+    justify-content: space-evenly;
+    margin-right: 4vw;
+    margin-bottom: 2vw;
+
+    a {
+      background-color: $lightBlue;
+      color: $textColor;
+      border-radius: 65px;
+      height: max-content;
+      text-decoration: none;
+      width: max-content;
+      text-align: center;
+
+      h5 {
+        font-size: calc(10px + (50 - 30) * ((100vw - 300px) / (600 - 300)));
+        margin: 0;
+        margin-top: 10px;
+        font-weight: 500;
+        padding: 0 50px;
+        font-family: 'Sintony';
+        padding-bottom: 10px;
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .sec#{$i} {
+        grid-area: sec#{$i};
+      }
+    }
+  }
+}
