@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,SAAS,EAAE,KAAK;CACnB",
+    "sources": [
+        "lab.scss"
+    ],
+    "names": [],
+    "file": "lab.css"
+}
