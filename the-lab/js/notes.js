@@ -1,23 +1,23 @@
-console.log('These are my notes on my lessons: ');
-
-console.log('Design Patterns!!!!');
+let message = "Today I learned about Design Patterns!!!";
 
 function newLine() {
-    console.log('---------------------------------------------');
+    message += "<br/>";
 }
 
 //notes on design patterns:
 //ways to make reusable oop
 
 
-console.log('There are 23 of them, and here they are!!');
+message += "There are 23 of them, and here they are!!";
 newLine();
-
+message += "quick tip...open up the console to see a siplay of some of the objects"
 
 //1 - Factory Pattern:
 
-console.log('Factory Pattern: Used with OOP to make objects with a couple lines of code!');
-console.log("P.S. this version is also an Abstract Factory Pattern: A Factory that can create multiple 'products' \n \n ");
+message += (' Factory Pattern: Used with OOP to make objects with a couple lines of code!');
+newLine();
+message += ("P.S. this version is also an Abstract Factory Pattern: A Factory that can create multiple 'products' \n \n ");
+newLine();
 
 function Crohnie(name) {
     this.name = name;
@@ -43,7 +43,7 @@ function FamilyFactory() {
 }
 
 function say() {
-    console.log("   Hi! I Am " + this.name + " I am a " + this.type);
+    message += (" <br/>  Hi! I Am " + this.name + " I am a " + this.type);
 }
 
 const newFamilyMember = new FamilyFactory();
@@ -54,16 +54,19 @@ familyMembers.push(newFamilyMember.create("James", 1));
 familyMembers.push(newFamilyMember.create("Dad", 2));
 familyMembers.push(newFamilyMember.create("Mom", 2));
 
+console.log(familyMembers);
+
 familyMembers.forEach(fam => {
     say.call(fam);
 });
 
 newLine();
+newLine();
 
 
 //Singleton Patterns!!
 
-console.log('Singleton Pattern: limit number of instances to at most one');
+message += ('Singleton Pattern: limit number of instances to at most one');
 
 //Once instance of process manager
 //Can Have mulitple process
@@ -96,7 +99,8 @@ const Singleton = (function () {
 const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
-console.log(processManager === processManager2);
+newLine();
+message += (processManager === processManager2);
 
 newLine();
 
@@ -167,3 +171,35 @@ const newUser = new SpecialJSUser('bob', {
     address: new Address('1', 'main')
 });
 console.log(newUser);
+
+
+//prodotypal Pattern!!
+newLine();
+message += "Prototypal Pattern!!!"
+newLine();
+message += "a special way to add programs to MANY objects, and to Many different kind of objects!!"
+
+function Animal(color, type) {
+    this.color = color;
+    this.type = type;
+}
+
+
+function AnimalFactory() {
+    this.create = (color, type) => {
+        return new Animal(color, type)
+    }
+}
+
+const newAnimal = new AnimalFactory();
+const animals = [];
+
+animals.push(newAnimal.create('yellow', 'bee'));
+
+console.log(animals)
+
+Animal.prototype.createPhysics = function () {
+    console.log('holla');
+}
+
+document.getElementById("body-text").innerHTML = message;
