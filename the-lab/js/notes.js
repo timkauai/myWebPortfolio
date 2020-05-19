@@ -7,10 +7,16 @@ function newLine() {
 //notes on design patterns:
 //ways to make reusable oop
 
-
+newLine();
 message += "There are 23 of them, and here they are!!";
 newLine();
 message += "quick tip...open up the console to see a siplay of some of the objects"
+
+message += "The first kind of design pattern is Creational!!"
+newLine();
+
+//TODO MAKE WHEN TO USE...WHAT THEY ARE...AND EXAMPLE PARTS!!
+message += 'Make when to use...what they are.....and example parts!!'
 
 //1 - Factory Pattern:
 
@@ -201,5 +207,56 @@ console.log(animals)
 Animal.prototype.createPhysics = function () {
     console.log('holla');
 }
+
+//Adapter Design Pattern
+newLine();
+message += 'Adapter Design Pattern is a pattern that allows you to combine two objects that cant work well together!!';
+newLine()
+message += "When to use it: when you have data that isn't formatted correctly, but has some dependencies or can't be altered to be given in the correct format."
+newLine()
+
+class iPhone7 {
+    useLightning() {
+        console.log('uses Lightning')
+    }
+}
+
+class GooglePixel {
+    useMicroUsb() {
+        console.log('uses micro usb.')
+    }
+}
+
+class LightningToMicroUsbAdapter {
+    constructor(adoptee, goal) {
+        this.adoptee = adoptee;
+        this.goal = goal;
+    }
+
+    adapt() {
+        this.adoptee = this.goal;
+        console.log(this.adoptee);
+        return this
+    }
+}
+
+const adaptedPower = new LightningToMicroUsbAdapter('lightning', 'micro usb');
+
+//Bridge Adapter
+newLine()
+message += 'bridge design pattern: to add different functionality to different objects (different remotes that work different for different tvs'
+newLine()
+message += 'When to use this: when you what mulitple objects that a similar with specific different functionality!'
+newLine()
+
+//Module
+message += 'Way to export things in different files. Write code in seperate file then use it other file'
+
+// export default at the end of the module
+//Fascade Pattern
+message += 'An inbetween. Fetch is a good example. you fetch it and fascade allows you to replace things really easy!'
+
+
+
 
 document.getElementById("body-text").innerHTML = message;
