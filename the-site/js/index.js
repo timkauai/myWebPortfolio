@@ -175,12 +175,18 @@ class PageContent {
     let projDiv = document.createElement("div");
     projDiv.className = "proj"
     Object.keys(projects).map(function (key, index) {
-      let project = projects[key];
-      const projectElem = document.createElement("a");
-      projectElem.innerHTML = project;
-      projDiv.appendChild(projectElem);
       if (key == "proj2") {
+        let project = projects[key];
+        const projectElem = document.createElement("div");
+        projectElem.innerHTML = '<a class="projectElemA" href="/the-lab/lab.html">' + project + "</a>";
         projectElem.className = "lab"
+        projDiv.appendChild(projectElem);
+      } else {
+        let project = projects[key];
+        const projectElem = document.createElement("a");
+        projectElem.className = 'projElem'
+        projectElem.innerHTML = project;
+        projDiv.appendChild(projectElem);
       }
     });
     projectsDiv.appendChild(projDiv)
@@ -189,12 +195,73 @@ class PageContent {
   }
   createContact() {
     this.contact = "Lets get in contact";
+    let contactForm = document.createElement("form");
+    contactForm.action = '/the-site/pages/page.html'
+    contactForm.method = "GET";
     let contactDiv = document.createElement("div");
     contactDiv.className = "contact-div";
     const contactElem = document.createElement("p");
     contactElem.innerHTML = this.contact;
     contactDiv.appendChild(contactElem);
-    document.body.appendChild(contactDiv);
+    const errorElem = document.createElement('div');
+    errorElem.className = 'error'
+    contactDiv.appendChild(errorElem);
+    const contactInputOne = document.createElement("div");
+    const contactInputOneHeading = document.createElement("p");
+    const contactInputOneInput = '<input id="name" name="name" type="text">'
+    contactInputOneHeading.className = "contact-input-one-heading";
+    contactInputOneHeading.innerHTML = "Your Name:";
+    contactInputOne.className = "contact-input-one";
+    contactInputOne.appendChild(contactInputOneHeading);
+    contactInputOne.innerHTML += contactInputOneInput
+    contactDiv.appendChild(contactInputOne);
+    const contactInputTwo = document.createElement("div");
+    const contactInputTwoHeading = document.createElement("p");
+    contactInputTwoHeading.innerHTML = "Your email:"
+    const contactInputTwoInput = document.createElement("input");
+    contactInputTwo.appendChild(contactInputTwoHeading);
+    contactInputTwo.appendChild(contactInputTwoInput);
+    contactDiv.appendChild(contactInputTwo);
+    const contactInputThree = document.createElement("div");
+    contactInputThree.className = 'contact-input-three'
+    const contactInputThreeHeading = document.createElement("p");
+    contactInputThreeHeading.innerHTML = "Your message:"
+    contactInputThreeHeading.className = 'contact-input-three-heading'
+    const contactInputThreeInput = document.createElement("input");
+    contactInputThreeInput.className = 'contact-input-three-input'
+    contactInputTwo.appendChild(contactInputThreeHeading);
+    contactInputTwo.appendChild(contactInputThreeInput);
+    contactDiv.appendChild(contactInputThree);
+    const contactButton = document.createElement("button");
+    contactButton.className = "contactButton";
+    contactButton.type = "submit"
+    contactButton.innerHTML = 'Send Message!'
+    contactDiv.appendChild(contactButton)
+    contactForm.appendChild(contactDiv);
+    document.body.appendChild(contactForm);
+
+    let name = document.getElementById('name')
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('sup kid')
+      let messages = [];
+      if (name === '' || name == null) {
+        console.log('contact input one is empty')
+        messages.push('Name is required.')
+      }
+      if (contactInputTwoInput === '' || contactInputTwoInput == null) {
+        messages.push('Email is required.')
+      }
+      if (contactInputThreeInput === '' || contactInputThreeInput == null) {
+        messages.push('Message is Required.')
+      }
+
+      if (messages.length > 0) {
+        e.preventDefault()
+        errorElem.innerHTML = messages.join(', ')
+      }
+    })
     return this;
   }
 }

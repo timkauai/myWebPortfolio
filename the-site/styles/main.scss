@@ -2,6 +2,8 @@
 $lightBlue: #a8dadc;
 $textColor: #1d3557;
 
+//TODO All VARIABLES...MOBILE FOR EVERYTHING...RESPONSIVE TYPOGRAPHY
+
 body {
   height: 96vh;
   margin: 0;
@@ -388,11 +390,6 @@ nav {
     margin-bottom: 4vh;
   }
 
-  .lab {
-    background-color: #1d3557;
-    color: #e9c46a;
-  }
-
   .proj {
     width: 100%;
     display: grid;
@@ -401,12 +398,26 @@ nav {
     justify-content: space-around;
   }
 
-  a {
+  .projElem {
     background-color: $lightBlue;
     border-radius: 30px;
     padding: 5% 10%;
     font-family: "Cantarell";
     font-size: 30px;
+  }
+
+  .projectElemA {
+    background-color: #1d3557;
+    color: #e9c46a;
+    font-family: "Cantarell";
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .lab {
+    background-color: #1d3557;
+    border-radius: 30px;
+    padding: 5% 10%;
   }
 }
 

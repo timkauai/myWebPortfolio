@@ -518,11 +518,6 @@ nav .current-link {
   margin-bottom: 4vh;
 }
 
-.projects-div .lab {
-  background-color: #1d3557;
-  color: #e9c46a;
-}
-
 .projects-div .proj {
   width: 100%;
   display: -ms-grid;
@@ -535,12 +530,26 @@ nav .current-link {
       justify-content: space-around;
 }
 
-.projects-div a {
+.projects-div .projElem {
   background-color: #a8dadc;
   border-radius: 30px;
   padding: 5% 10%;
   font-family: "Cantarell";
   font-size: 30px;
+}
+
+.projects-div .projectElemA {
+  background-color: #1d3557;
+  color: #e9c46a;
+  font-family: "Cantarell";
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.projects-div .lab {
+  background-color: #1d3557;
+  border-radius: 30px;
+  padding: 5% 10%;
 }
 
 .contact-div {
