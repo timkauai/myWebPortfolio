@@ -70,7 +70,7 @@ newLine();
 newLine();
 
 
-//Singleton Patterns!!
+//!!Singleton Patterns!!
 
 message += ('Singleton Pattern: limit number of instances to at most one');
 
@@ -110,7 +110,7 @@ message += (processManager === processManager2);
 
 newLine();
 
-//Builder Pattern
+//!!Builder Pattern
 
 class Address {
     constructor(zip, street) {
