@@ -20,10 +20,10 @@ class PageContent {
         if (PageContext.skills) {
             this.createSkills();
         }
-        if (PageContext.jobExp) {
+        if (PageContext.workExp) {
             this.createJobExp();
         }
-        if (PageContext.myProjects) {
+        if (PageContext.projs) {
             this.createMyProjects();
         }
         if (PageContext.contact) {
@@ -97,20 +97,42 @@ class PageContent {
         return this
     }
     createJobExp() {
-        this.jobExp = {
+        let obj = {
             job1: 'Hokuala',
             job2: 'Nalukai'
         };
+        this.jobExp = obj
+        let introDiv = document.createElement('div')
+        Object.keys(obj).map(function (key, index) {
+            let txt = obj[key]
+            const job = document.createElement('p').innerHTML = txt;
+            introDiv.innerHTML += job;
+            console.log(txt);
+        })
+        document.body.appendChild(introDiv)
         return this
     }
     createMyProjects() {
-        this.myProjects = {
+        let obj = {
             proj1: 'Randevu'
         };
+        this.myProjects = obj
+        let introDiv = document.createElement('div')
+        Object.keys(obj).map(function (key, index) {
+            let txt = obj[key]
+            const job = document.createElement('p').innerHTML = txt;
+            introDiv.innerHTML += job;
+            console.log(txt);
+        })
+        document.body.appendChild(introDiv)
         return this
     }
     createContact() {
         this.contact = 'Lets get in contact';
+        let introDiv = document.createElement('div')
+        const job = document.createElement('p').innerHTML = this.contact;
+        introDiv.innerHTML += job;
+        document.body.appendChild(introDiv)
         return this
     }
 }
@@ -150,4 +172,28 @@ const hiring = new PageContext('I am interested in hiring you', {
     contact: true
 });
 
-const page = new PageContent(hiring);
+const learning = new PageContext('to learn about you', {
+    meIntroOne: true,
+    meIntroTwo: true,
+    skills: true,
+    workExp: true,
+    projs: true,
+    lab: true,
+    contact: true
+});
+
+const check = new PageContext('to check this site out', {
+    projs: true,
+    lab: true
+});
+
+const contact = new PageContext('to get in contact with you', {
+    contact: true
+});
+
+const work = new PageContext('to see your work', {
+    workExp: true,
+    lab: true
+});
+
+const page = new PageContent(work);
