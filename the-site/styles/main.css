@@ -332,4 +332,72 @@ div {
     grid-area: sec5;
   }
 }
+
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+nav .homeLink {
+  display: block;
+  background-color: #F2A5A4;
+  margin-top: 4vh;
+  margin-left: 3vw;
+  font-size: 30px;
+  font-family: 'Sintony', sans-serif;
+  text-decoration: none;
+  color: #1D3557;
+  border-radius: 65px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 5px 4vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+nav .current-link {
+  display: block;
+  background-color: #A8DADC;
+  margin-top: 4vh;
+  margin-left: 3vw;
+  font-size: 25px;
+  font-family: 'Sintony', sans-serif;
+  text-decoration: none;
+  color: #1D3557;
+  border-radius: 65px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 5px 4vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 60px;
+}
+
+.introOneDiv {
+  margin-left: 10vw;
+  width: 70vw;
+  font-size: 30px;
+  margin-top: 5vh;
+  font-family: 'Cantarell';
+}
+
+#dark {
+  height: 10px;
+  background-color: #1D3557;
+}
 /*# sourceMappingURL=main.css.map */
