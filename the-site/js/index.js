@@ -70,8 +70,7 @@ class PageContent {
     var introTwo = {
       line1: "I write code from a designers perspective: to look good",
       line2: "I try to learn something new with every build",
-      line3:
-        "Turing a design into an actual product is the best part of coding",
+      line3: "Turing a design into an actual product is the best part of coding",
     };
     this.meIntroTwo = introTwo;
     let introTwoDiv = document.createElement("div");
@@ -111,6 +110,15 @@ class PageContent {
       let skillItemDiv = document.createElement("div");
       skillItemDiv.className = "skill-item";
       let skillText = skills[key];
+      if (skillText[1] === "95%") {
+        skillItemDiv.className += " ninty-five"
+      } else if (skillText[1] === "85%") {
+        skillItemDiv.className += " eighty-five"
+      } else if (skillText[1] === "70%") {
+        skillItemDiv.className += " seventy"
+      } else {
+        skillItemDiv.className += " fifty"
+      }
       const skillElem = document.createElement("p");
       skillElem.innerHTML = skillText[0];
       const confidElem = document.createElement("p");
@@ -124,34 +132,58 @@ class PageContent {
   }
   createJobExp() {
     let jobExp = {
-      job1: "Hokuala",
-      job2: "Nalukai",
+      job1: "Hokuala <br> Cart Boy. <br> I learned a bunch about hospitality and treating the customers that come to play golf.",
+      job2: "Nalukai <br> Entrepreneur. <br> Nalukai is not exactly a job, but I was an Entrepreneur and learned about working with other coder and I learned a bunch about business. This camp changed my life.",
     };
     this.jobExp = jobExp;
     let jobExpDiv = document.createElement("div");
     jobExpDiv.className = "job-exp-div";
+    let heading = document.createElement("h3");
+    heading.innerHTML = "My Work Experience:";
+    heading.className = "heading";
+    jobExpDiv.appendChild(heading);
+    let headingUnderline = document.createElement("div");
+    headingUnderline.className = "dark";
+    jobExpDiv.appendChild(headingUnderline);
+    let jobsDiv = document.createElement("div");
+    jobsDiv.className = "jobs"
     Object.keys(jobExp).map(function (key, index) {
       let job = jobExp[key];
       const jobElem = document.createElement("p");
       jobElem.innerHTML = job;
-      jobExpDiv.appendChild(jobElem);
+      jobsDiv.appendChild(jobElem);
     });
+    jobExpDiv.appendChild(jobsDiv);
     document.body.appendChild(jobExpDiv);
     return this;
   }
   createMyProjects() {
     let projects = {
-      proj1: "Randevu",
+      proj1: "Randevu <br> <br> A MeetUp Platform for kickstarting a new lifestyle",
+      proj2: "Lab <br> <br> A part of this site that has all of my small side-projects."
     };
     this.myProjects = projects;
     let projectsDiv = document.createElement("div");
     projectsDiv.className = "projects-div";
+    let heading = document.createElement("h3");
+    heading.innerHTML = "My Projects:";
+    heading.className = "heading";
+    projectsDiv.appendChild(heading);
+    let headingUnderline = document.createElement("div");
+    headingUnderline.className = "dark";
+    projectsDiv.appendChild(headingUnderline);
+    let projDiv = document.createElement("div");
+    projDiv.className = "proj"
     Object.keys(projects).map(function (key, index) {
       let project = projects[key];
-      const projectElem = document.createElement("p");
+      const projectElem = document.createElement("a");
       projectElem.innerHTML = project;
-      projectsDiv.appendChild(projectElem);
+      projDiv.appendChild(projectElem);
+      if (key == "proj2") {
+        projectElem.className = "lab"
+      }
     });
+    projectsDiv.appendChild(projDiv)
     document.body.appendChild(projectsDiv);
     return this;
   }
@@ -169,8 +201,7 @@ class PageContent {
 
 class PageContext {
   constructor(
-    pageTitle,
-    {
+    pageTitle, {
       hiringHeading = false,
       meIntroOne = false,
       meIntroTwo = false,
@@ -226,6 +257,7 @@ const contact = new PageContext("to get in contact with you", {
 
 const work = new PageContext("to see your work", {
   workExp: true,
+  projs: true,
   lab: true,
 });
 

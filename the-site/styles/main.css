@@ -9,19 +9,19 @@ h1 {
   font-weight: 400;
   font-size: calc(35px + (100 - 40) * ((100vw - 300px) / (1600 - 300)));
   margin-top: 0;
-  color: #1D3557;
+  color: #1d3557;
 }
 
 h3 {
   font-family: "Sintony", sans-serif;
   font-weight: 300;
   font-size: calc(25px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
-  color: #1D3557;
+  color: #1d3557;
 }
 
 div {
   font-family: "Cantarell", sans-serif;
-  color: #1D3557;
+  color: #1d3557;
 }
 
 .level2 {
@@ -71,8 +71,8 @@ div {
 }
 
 .level3 a {
-  background-color: #A8DADC;
-  color: #1D3557;
+  background-color: #a8dadc;
+  color: #1d3557;
   border-radius: 65px;
   height: 100%;
   text-decoration: none;
@@ -88,7 +88,7 @@ div {
   margin-top: 10px;
   font-weight: 500;
   padding: 0 50px;
-  font-family: 'Sintony';
+  font-family: "Sintony";
 }
 
 .level3 .sec1 {
@@ -133,7 +133,7 @@ div {
 
 .level3 .sec6 {
   background-color: #264653;
-  color: #E9C46A;
+  color: #e9c46a;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -178,8 +178,8 @@ div {
             justify-content: space-evenly;
   }
   .level3 a {
-    background-color: #A8DADC;
-    color: #1D3557;
+    background-color: #a8dadc;
+    color: #1d3557;
     border-radius: 65px;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -196,7 +196,7 @@ div {
     margin-top: 10px;
     font-weight: 500;
     padding: 0 30px;
-    font-family: 'Sintony';
+    font-family: "Sintony";
     padding-bottom: 10px;
   }
   .level3 .sec1 {
@@ -280,8 +280,8 @@ div {
     margin-bottom: 2vw;
   }
   .level3 a {
-    background-color: #A8DADC;
-    color: #1D3557;
+    background-color: #a8dadc;
+    color: #1d3557;
     border-radius: 65px;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -298,7 +298,7 @@ div {
     margin-top: 10px;
     font-weight: 500;
     padding: 0 50px;
-    font-family: 'Sintony';
+    font-family: "Sintony";
     padding-bottom: 10px;
   }
   .level3 .sec1 {
@@ -346,13 +346,13 @@ nav {
 
 nav .homeLink {
   display: block;
-  background-color: #F2A5A4;
+  background-color: #f2a5a4;
   margin-top: 4vh;
   margin-left: 3vw;
   font-size: 30px;
-  font-family: 'Sintony', sans-serif;
+  font-family: "Sintony", sans-serif;
   text-decoration: none;
-  color: #1D3557;
+  color: #1d3557;
   border-radius: 65px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -366,13 +366,13 @@ nav .homeLink {
 
 nav .current-link {
   display: block;
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   margin-top: 4vh;
   margin-left: 3vw;
   font-size: 25px;
-  font-family: 'Sintony', sans-serif;
+  font-family: "Sintony", sans-serif;
   text-decoration: none;
-  color: #1D3557;
+  color: #1d3557;
   border-radius: 65px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -393,7 +393,7 @@ nav .current-link {
   width: 70vw;
   font-size: 30px;
   margin-top: 5vh;
-  font-family: 'Cantarell';
+  font-family: "Cantarell";
 }
 
 .intro-one-div p {
@@ -410,7 +410,7 @@ nav .current-link {
   width: 70vw;
   font-size: 30px;
   margin-top: 10vh;
-  font-family: 'Cantarell';
+  font-family: "Cantarell";
   text-align: right;
 }
 
@@ -425,7 +425,7 @@ nav .current-link {
 
 .dark {
   height: 2vh;
-  background-color: #457B9D;
+  background-color: #457b9d;
   width: 40vw;
   border-radius: 30px;
 }
@@ -442,24 +442,167 @@ nav .current-link {
 }
 
 .skills .skill-item {
-  background-color: #F2A5A4;
+  background-color: #f2a5a4;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 7fr 1fr;
       grid-template-columns: 7fr 1fr;
   margin-left: -10%;
   padding-left: 11%;
+  margin-bottom: 1vh;
+  font-size: 20px;
+  border-radius: 0 30px 30px 0;
+}
+
+.skills .ninty-five {
+  width: 95%;
+}
+
+.skills .eighty-five {
+  width: 85%;
+}
+
+.skills .seventy {
+  width: 70%;
+}
+
+.skills .fifty {
+  width: 50%;
+}
+
+.skills .dark {
+  margin-bottom: 3vh;
 }
 
 .job-exp-div {
   float: left;
+  width: 100%;
+}
+
+.job-exp-div h3 {
+  margin-bottom: 0;
+  font-size: 50px;
+}
+
+.job-exp-div .jobs {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45vw 45vw;
+      grid-template-columns: 45vw 45vw;
+  -ms-grid-rows: 30vw;
+      grid-template-rows: 30vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.job-exp-div p {
+  background-color: #a8dadc;
+  border-radius: 30px;
+  padding: 5% 10%;
+  font-family: "Cantarell";
+  font-size: 30px;
 }
 
 .projects-div {
   float: left;
+  width: 100%;
+}
+
+.projects-div h3 {
+  margin-bottom: 0;
+  font-size: 50px;
+}
+
+.projects-div .dark {
+  margin-bottom: 4vh;
+}
+
+.projects-div .lab {
+  background-color: #1d3557;
+  color: #e9c46a;
+}
+
+.projects-div .proj {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40vw 40vw;
+      grid-template-columns: 40vw 40vw;
+  -ms-grid-rows: 20vw;
+      grid-template-rows: 20vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.projects-div a {
+  background-color: #a8dadc;
+  border-radius: 30px;
+  padding: 5% 10%;
+  font-family: "Cantarell";
+  font-size: 30px;
 }
 
 .contact-div {
   float: left;
+  width: 100%;
+  margin-top: 10vh;
+}
+
+.contact-div p {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  margin-top: 5vh;
+  float: left;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5vw 5vw 5vw 5vw 5vw;
+      grid-template-columns: 5vw 5vw 5vw 5vw 5vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer div {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer .github {
+  background-image: url(../imgs/github-profile.JPG);
+  background-position: 50% 30%;
+}
+
+footer .email {
+  background-image: url(../imgs/KauaiSeniorPortraits-55.JPG);
+}
+
+footer .insta {
+  background-image: url(../imgs/insta-profile.JPG);
+}
+
+footer .LinkedIn {
+  background-image: url(../imgs/linkedin-profile.JPG);
+}
+
+footer .dribbble {
+  background-image: url(../imgs/dribbble-profile.JPG);
+  background-position: 60% 30%;
+}
+
+footer p {
+  text-align: center;
+  color: #f1faee;
+}
+
+div:hover p {
+  color: #264653;
 }
 /*# sourceMappingURL=main.css.map */
