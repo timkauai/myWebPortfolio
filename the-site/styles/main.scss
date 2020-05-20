@@ -268,15 +268,75 @@ nav {
   font-size: 60px;
 }
 
-.introOneDiv {
+.intro-one-div {
   margin-left: 10vw;
   width: 70vw;
   font-size: 30px;
   margin-top: 5vh;
   font-family: 'Cantarell';
+
+  p {
+    margin: 0;
+  }
+
+  .dark {
+    margin-left: 5vw;
+  }
 }
 
-#dark {
-  height: 10px;
-  background-color: $textColor;
+.intro-two-div {
+  float: right;
+  margin-right: 10vw;
+  width: 70vw;
+  font-size: 30px;
+  margin-top: 10vh;
+  font-family: 'Cantarell';
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+
+  .dark {
+    float: right;
+    margin-right: 5vw;
+  }
+}
+
+.dark {
+  height: 2vh;
+  background-color: #457B9D;
+  width: 40vw;
+  border-radius: 30px;
+}
+
+.skills {
+  width: 100%;
+  float: right;
+  margin-top: 10vh;
+
+  .heading {
+    margin: 0;
+    font-size: 50px;
+  }
+
+  .skill-item {
+    background-color: #F2A5A4;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    margin-left: -10%;
+    padding-left: 11%;
+  }
+}
+
+.job-exp-div {
+  float: left;
+}
+
+.projects-div {
+  float: left;
+}
+
+.contact-div {
+  float: left;
 }
