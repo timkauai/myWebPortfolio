@@ -243,18 +243,16 @@ class PageContent {
     let name = document.getElementById('name')
 
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      console.log('sup kid')
       let messages = [];
-      if (name === '' || name == null) {
+      if (name.value === '' || name.value == null) {
         console.log('contact input one is empty')
-        messages.push('Name is required.')
+        messages.push('Name is required')
       }
-      if (contactInputTwoInput === '' || contactInputTwoInput == null) {
-        messages.push('Email is required.')
+      if (contactInputTwoInput.value === '' || contactInputTwoInput.value == null) {
+        messages.push('Email is required')
       }
-      if (contactInputThreeInput === '' || contactInputThreeInput == null) {
-        messages.push('Message is Required.')
+      if (contactInputThreeInput.value === '' || contactInputThreeInput.value == null) {
+        messages.push('Message is Required')
       }
 
       if (messages.length > 0) {

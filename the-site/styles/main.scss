@@ -482,3 +482,26 @@ div:hover {
     color: #264653;
   }
 }
+
+.contact-div {
+  input {
+    background-color: #f2a5a4;
+    border-radius: 10px;
+    margin-left: 40%;
+    width: 20%;
+    height: 5vh;
+  }
+  button {
+    float: right;
+    width: 20vw;
+    height: 7vh;
+    margin-right: 40vw;
+    margin-top: 20px;
+    background-color: $lightBlue;
+    border: 0px solid black;
+    border-radius: 15px;
+    font-size: 25px;
+    color: #1d3557;
+  }
+  margin-bottom: 5vh;
+}
