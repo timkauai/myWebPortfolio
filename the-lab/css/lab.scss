@@ -80,6 +80,9 @@ main {
             height: 20vh;
             background-color: lightgoldenrodyellow;
             border-radius: 25px;
+            background-repeat: no-repeat;
+            background-position: 30% 10%;
+            background-size: cover;
         }
 
         h3 {
@@ -104,7 +107,7 @@ main {
         .skills {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 30px;
+            grid-gap: 0 30px;
 
             p {
                 background-color: #F4A261;
@@ -126,5 +129,32 @@ main {
                 font-size: 20px;
             }
         }
+    }
+}
+
+.sec1 .img {
+    background-image: url(../imgs/dashboard.png);
+}
+
+.sec2 .img {
+    background-image: url(../imgs/success.png);
+}
+
+.sec3 .img {
+    background-image: url(../imgs/morality.png);
+}
+
+.sec4 .img {
+    background-image: url(../imgs/web-dev.jpeg);
+}
+
+.sec5 .img {
+    background-image: url(../imgs/this-site.png);
+}
+
+footer {
+    h1 {
+        text-align: right;
+        margin-right: 3em;
     }
 }

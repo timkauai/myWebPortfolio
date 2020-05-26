@@ -94,6 +94,9 @@ main .home-grid-item .img {
   height: 20vh;
   background-color: lightgoldenrodyellow;
   border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: 30% 10%;
+  background-size: cover;
 }
 
 main .home-grid-item h3 {
@@ -120,7 +123,7 @@ main .home-grid-item .skills {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 0 30px;
 }
 
 main .home-grid-item .skills p {
@@ -146,5 +149,30 @@ main .home-grid-item .links a {
   height: -moz-min-content;
   height: min-content;
   font-size: 20px;
+}
+
+.sec1 .img {
+  background-image: url(../imgs/dashboard.png);
+}
+
+.sec2 .img {
+  background-image: url(../imgs/success.png);
+}
+
+.sec3 .img {
+  background-image: url(../imgs/morality.png);
+}
+
+.sec4 .img {
+  background-image: url(../imgs/web-dev.jpeg);
+}
+
+.sec5 .img {
+  background-image: url(../imgs/this-site.png);
+}
+
+footer h1 {
+  text-align: right;
+  margin-right: 3em;
 }
 /*# sourceMappingURL=lab.css.map */
