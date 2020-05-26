@@ -20,8 +20,9 @@ h1 {
 nav {
 
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content max-content max-content;
     align-items: baseline;
+    width: 100%;
 
     .home-link {
         display: block;
@@ -55,6 +56,24 @@ nav {
         width: max-content;
         text-align: center;
         height: max-content;
+    }
+
+    .current-link {
+        background-color: #2A9D8F;
+        display: block;
+        margin-top: 4vh;
+        margin-left: 3vw;
+        font-size: 25px;
+        font-family: "Sintony", sans-serif;
+        text-decoration: none;
+        color: #000000;
+        border-radius: 65px;
+        height: max-content;
+        padding: 5px 4vw;
+        width: max-content;
+        text-align: center;
+        height: max-content;
+        cursor: pointer;
     }
 
 }

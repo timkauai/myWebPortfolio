@@ -1,5 +1,5 @@
 //Declaring Variables for All Lab Project Pages!!
-class Page {
+/*class Page {
     constructor(project, {
         why,
         goal,
@@ -25,4 +25,59 @@ const myDashboard = new Page('myDashboard', {
     myRole: "I coded everything for this, and designed it! It was a fun side project!"
 });
 
-document.getElementById('why').innerHTML = myDashboard.why;
+document.getElementById('why').innerHTML = myDashboard.why;*/
+
+function clicked(clicked) {
+    localStorage.setItem("lab-clicked", clicked);
+}
+
+let hiringHeadingCopy = "Here is why you should hire me:";
+
+class PageContent {
+    constructor(PageContext) {
+        let heading = document.createElement("p");
+        heading.innerHTML = PageContext.pageTitle;
+        heading.className = "current-link";
+        let nav = document.getElementById("nav");
+        nav.appendChild(heading);
+    }
+}
+
+class PageContext {
+    constructor(
+        pageTitle, {
+            heading = false
+        } = {}
+    ) {
+        this.pageTitle = pageTitle;
+        this.heading = heading;
+    }
+}
+
+const thisSite = new PageContext("This Very Site", {
+    heading: true
+});
+
+const Dashboard = new PageContext("theDashboard", {
+    heading: true
+});
+
+const Morality = new PageContext("Morality English Project", {
+    heading: true
+});
+
+const Success = new PageContext("Success English Project", {
+    heading: true
+});
+
+let pageName = localStorage.getItem("lab-clicked");
+
+if (pageName == "this-site") {
+    const page = new PageContent(thisSite);
+} else if (pageName === "dashboard") {
+    const page = new PageContent(Dashboard);
+} else if (pageName === "morality") {
+    const page = new PageContent(Morality);
+} else if (pageName === "success") {
+    const page = new Page(Success)
+}
