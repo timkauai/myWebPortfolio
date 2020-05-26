@@ -61,7 +61,7 @@ div {
   grid-template-rows: 11vh 11vh 11vh;
   grid-gap: 2vw;
   padding: 5vh 5vw;
-  grid-template-areas: "sec1 sec1 sec1 sec2" "sec3 nil sec4 sec4" "sec5 sec5 sec6 sec6";
+  grid-template-areas: "sec1 sec1 sec1 sec2""sec3 nil sec4 sec4""sec5 sec5 sec6 sec6";
   padding: 0;
   justify-content: space-evenly;
 
@@ -126,7 +126,7 @@ div {
     grid-template-rows: 11vh 11vh 11vh;
     grid-gap: 2vw;
     padding: 5vh 5vw;
-    grid-template-areas: "sec1 sec1 sec1 sec2" "sec3 nil sec4 sec4" "sec5 sec5 empty empty";
+    grid-template-areas: "sec1 sec1 sec1 sec2""sec3 nil sec4 sec4""sec5 sec5 empty empty";
     padding: 0;
     justify-content: space-evenly;
 
@@ -164,7 +164,7 @@ div {
     display: grid;
     grid-template-rows: 20vh 5vh;
     grid-template-columns: 100%;
-    grid-template-areas: "pic" "txt";
+    grid-template-areas: "pic""txt";
 
     div {
       background-color: lightgreen;
@@ -191,7 +191,7 @@ div {
     grid-template-columns: 34vw 12vw 6vw;
     grid-template-rows: 11vh 11vh 11vh 11vh 11vh;
     grid-gap: 2vw;
-    grid-template-areas: "sec1 sec1 sec1" "sec2 sec2 sec2" "sec3 sec3 sec3" "sec4 sec4 sec4" "sec5 sec5 sec5";
+    grid-template-areas: "sec1 sec1 sec1""sec2 sec2 sec2""sec3 sec3 sec3""sec4 sec4 sec4""sec5 sec5 sec5";
     padding: 0;
     justify-content: space-evenly;
     margin-right: 4vw;
@@ -326,8 +326,13 @@ nav {
     margin-left: -10%;
     padding-left: 11%;
     margin-bottom: 1vh;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 0 30px 30px 0;
+    width: 80%;
+
+    p {
+      padding-left: 10%;
+    }
   }
 
   .ninty-five {
@@ -450,30 +455,27 @@ footer {
   }
 
   .github {
-    background-image: url(../imgs/github-profile.JPG);
+    background-image: url(../imgs/github-icon.png);
     background-position: 50% 30%;
   }
 
   .email {
-    background-image: url(../imgs/KauaiSeniorPortraits-55.JPG);
+    background-image: url(../imgs/email-icon.jpg);
+    background-position: 50%;
   }
 
   .insta {
-    background-image: url(../imgs/insta-profile.JPG);
+    background-image: url(../imgs/insta-icon.jpg);
+    background-position: 50%;
   }
 
   .LinkedIn {
-    background-image: url(../imgs/linkedin-profile.JPG);
+    background-image: url(../imgs/linkedin-icon.png);
   }
 
   .dribbble {
-    background-image: url(../imgs/dribbble-profile.JPG);
+    background-image: url(../imgs/dribbble.png);
     background-position: 60% 30%;
-  }
-
-  p {
-    text-align: center;
-    color: #f1faee;
   }
 }
 
@@ -491,6 +493,7 @@ div:hover {
     width: 20%;
     height: 5vh;
   }
+
   button {
     float: right;
     width: 20vw;
@@ -503,5 +506,6 @@ div:hover {
     font-size: 25px;
     color: #1d3557;
   }
+
   margin-bottom: 5vh;
 }

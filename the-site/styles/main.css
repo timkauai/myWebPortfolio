@@ -450,8 +450,13 @@ nav .current-link {
   margin-left: -10%;
   padding-left: 11%;
   margin-bottom: 1vh;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 0 30px 30px 0;
+  width: 80%;
+}
+
+.skills .skill-item p {
+  padding-left: 10%;
 }
 
 .skills .ninty-five {
@@ -585,30 +590,27 @@ footer div {
 }
 
 footer .github {
-  background-image: url(../imgs/github-profile.JPG);
+  background-image: url(../imgs/github-icon.png);
   background-position: 50% 30%;
 }
 
 footer .email {
-  background-image: url(../imgs/KauaiSeniorPortraits-55.JPG);
+  background-image: url(../imgs/email-icon.jpg);
+  background-position: 50%;
 }
 
 footer .insta {
-  background-image: url(../imgs/insta-profile.JPG);
+  background-image: url(../imgs/insta-icon.jpg);
+  background-position: 50%;
 }
 
 footer .LinkedIn {
-  background-image: url(../imgs/linkedin-profile.JPG);
+  background-image: url(../imgs/linkedin-icon.png);
 }
 
 footer .dribbble {
-  background-image: url(../imgs/dribbble-profile.JPG);
+  background-image: url(../imgs/dribbble.png);
   background-position: 60% 30%;
-}
-
-footer p {
-  text-align: center;
-  color: #f1faee;
 }
 
 div:hover p {

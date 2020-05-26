@@ -110,21 +110,9 @@ class PageContent {
       let skillItemDiv = document.createElement("div");
       skillItemDiv.className = "skill-item";
       let skillText = skills[key];
-      if (skillText[1] === "95%") {
-        skillItemDiv.className += " ninty-five"
-      } else if (skillText[1] === "85%") {
-        skillItemDiv.className += " eighty-five"
-      } else if (skillText[1] === "70%") {
-        skillItemDiv.className += " seventy"
-      } else {
-        skillItemDiv.className += " fifty"
-      }
       const skillElem = document.createElement("p");
       skillElem.innerHTML = skillText[0];
-      const confidElem = document.createElement("p");
-      confidElem.innerHTML = skillText[1];
       skillItemDiv.appendChild(skillElem);
-      skillItemDiv.appendChild(confidElem);
       skillsDiv.appendChild(skillItemDiv);
     });
     document.body.appendChild(skillsDiv);
@@ -155,6 +143,7 @@ class PageContent {
     });
     jobExpDiv.appendChild(jobsDiv);
     document.body.appendChild(jobExpDiv);
+
     return this;
   }
   createMyProjects() {
@@ -169,6 +158,9 @@ class PageContent {
     heading.innerHTML = "My Projects:";
     heading.className = "heading";
     projectsDiv.appendChild(heading);
+    let instrutorElem = document.createElement("p");
+    instrutorElem.innerHTML = "Click on Lab to see other projects";
+    projectsDiv.appendChild(instrutorElem);
     let headingUnderline = document.createElement("div");
     headingUnderline.className = "dark";
     projectsDiv.appendChild(headingUnderline);
@@ -197,7 +189,7 @@ class PageContent {
     this.contact = "Lets get in contact";
     let contactForm = document.createElement("form");
     contactForm.action = '/the-site/pages/page.html'
-    contactForm.method = "GET";
+    contactForm.method = "POST";
     let contactDiv = document.createElement("div");
     contactDiv.className = "contact-div";
     const contactElem = document.createElement("p");
@@ -212,6 +204,7 @@ class PageContent {
     contactInputOneHeading.className = "contact-input-one-heading";
     contactInputOneHeading.innerHTML = "Your Name:";
     contactInputOne.className = "contact-input-one";
+    contactInputOne.id = "name";
     contactInputOne.appendChild(contactInputOneHeading);
     contactInputOne.innerHTML += contactInputOneInput
     contactDiv.appendChild(contactInputOne);
@@ -219,6 +212,7 @@ class PageContent {
     const contactInputTwoHeading = document.createElement("p");
     contactInputTwoHeading.innerHTML = "Your email:"
     const contactInputTwoInput = document.createElement("input");
+    contactInputTwoInput.id = "email"
     contactInputTwo.appendChild(contactInputTwoHeading);
     contactInputTwo.appendChild(contactInputTwoInput);
     contactDiv.appendChild(contactInputTwo);
@@ -229,6 +223,7 @@ class PageContent {
     contactInputThreeHeading.className = 'contact-input-three-heading'
     const contactInputThreeInput = document.createElement("input");
     contactInputThreeInput.className = 'contact-input-three-input'
+    contactInputThreeInput.id = 'message'
     contactInputTwo.appendChild(contactInputThreeHeading);
     contactInputTwo.appendChild(contactInputThreeInput);
     contactDiv.appendChild(contactInputThree);
@@ -240,14 +235,11 @@ class PageContent {
     contactForm.appendChild(contactDiv);
     document.body.appendChild(contactForm);
 
-    let name = document.getElementById('name')
-
     contactForm.addEventListener('submit', (e) => {
       let messages = [];
-      if (name.value === '' || name.value == null) {
-        console.log('contact input one is empty')
-        messages.push('Name is required')
-      }
+      // if (contactInputOneInput.value === '' || contactInputOneInput.value == null) {
+      //messages.push('Name is required')
+      // }
       if (contactInputTwoInput.value === '' || contactInputTwoInput.value == null) {
         messages.push('Email is required')
       }
@@ -260,6 +252,8 @@ class PageContent {
         errorElem.innerHTML = messages.join(', ')
       }
     })
+
+    contactForm.action = "https://script.google.com/macros/s/AKfycbzYXWcZabRMDRZP-7zpcmcC1ibZWl5SrbZ99PPo/exec";
     return this;
   }
 }
@@ -298,7 +292,6 @@ const hiring = new PageContext("I am interested in hiring you", {
   workExp: true,
   projs: true,
   lab: true,
-  contact: true,
 });
 
 const learning = new PageContext("to learn about you", {
@@ -308,7 +301,6 @@ const learning = new PageContext("to learn about you", {
   workExp: true,
   projs: true,
   lab: true,
-  contact: true,
 });
 
 const check = new PageContext("to check this site out", {
@@ -316,9 +308,7 @@ const check = new PageContext("to check this site out", {
   lab: true,
 });
 
-const contact = new PageContext("to get in contact with you", {
-  contact: true,
-});
+const contact = new PageContext("to get in contact with you", {});
 
 const work = new PageContext("to see your work", {
   workExp: true,
