@@ -1,4 +1,4 @@
-/*let message = "Today I learned about Design Patterns!!!";
+let message = "Today I learned about Design Patterns!!!";
 
 function newLine() {
     message += "<br/>";
@@ -259,4 +259,4 @@ message += 'An inbetween. Fetch is a good example. you fetch it and fascade allo
 
 
 
-document.getElementById("body-text").innerHTML = message;*/
+document.getElementById("body-text").innerHTML = message;

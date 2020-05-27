@@ -28,56 +28,66 @@ const myDashboard = new Page('myDashboard', {
 document.getElementById('why').innerHTML = myDashboard.why;*/
 
 function clicked(clicked) {
-    localStorage.setItem("lab-clicked", clicked);
+  localStorage.setItem("lab-clicked", clicked);
 }
 
 let hiringHeadingCopy = "Here is why you should hire me:";
 
 class PageContent {
-    constructor(PageContext) {
-        let heading = document.createElement("p");
-        heading.innerHTML = PageContext.pageTitle;
-        heading.className = "current-link";
-        let nav = document.getElementById("nav");
-        nav.appendChild(heading);
-    }
+  constructor(PageContext) {
+    this.createNavItem(PageContext);
+    this.createHeading(PageContext);
+  }
+
+  createNavItem(PageContext) {
+    let heading = document.createElement("p");
+    heading.innerHTML = PageContext.pageTitle;
+    heading.className = "current-link";
+    let nav = document.getElementById("nav");
+    nav.appendChild(heading);
+  }
+
+  createHeading(PageContext) {
+    let heading = document.createElement("p");
+    heading.innerHTML = PageContext.heading;
+    heading.className = "current-link";
+    document.body.appendChild(heading);
+  }
 }
 
 class PageContext {
-    constructor(
-        pageTitle, {
-            heading = false
-        } = {}
-    ) {
-        this.pageTitle = pageTitle;
-        this.heading = heading;
-    }
+  constructor(pageTitle, { heading = false } = {}) {
+    this.pageTitle = pageTitle;
+    this.heading = heading;
+  }
 }
 
 const thisSite = new PageContext("This Very Site", {
-    heading: true
+  heading: true,
 });
 
 const Dashboard = new PageContext("theDashboard", {
-    heading: true
+  heading: true,
 });
 
 const Morality = new PageContext("Morality English Project", {
-    heading: true
+  heading: true,
 });
 
 const Success = new PageContext("Success English Project", {
-    heading: true
+  heading: "Hello",
 });
 
 let pageName = localStorage.getItem("lab-clicked");
 
+console.log(pageName);
+
 if (pageName == "this-site") {
-    const page = new PageContent(thisSite);
+  const page = new PageContent(thisSite);
 } else if (pageName === "dashboard") {
-    const page = new PageContent(Dashboard);
+  const page = new PageContent(Dashboard);
 } else if (pageName === "morality") {
-    const page = new PageContent(Morality);
+  const page = new PageContent(Morality);
 } else if (pageName === "success") {
-    const page = new Page(Success)
+  const page = new PageContent(Success);
 }
