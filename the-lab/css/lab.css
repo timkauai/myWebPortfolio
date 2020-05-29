@@ -1,5 +1,6 @@
 html {
   background-color: #264653;
+  overflow-x: hidden;
 }
 
 p {
@@ -94,7 +95,7 @@ nav .current-link {
   margin: 4vh 3vw;
 }
 
-main {
+.lab-main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -103,7 +104,7 @@ main {
   padding: 1rem 3vw;
 }
 
-main .home-grid-item {
+.lab-main .home-grid-item {
   background-color: #E9C46A;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -112,7 +113,7 @@ main .home-grid-item {
   border-radius: 40px;
 }
 
-main .home-grid-item .img {
+.lab-main .home-grid-item .img {
   width: 100%;
   height: 20vh;
   background-color: lightgoldenrodyellow;
@@ -122,18 +123,18 @@ main .home-grid-item .img {
   background-size: cover;
 }
 
-main .home-grid-item h3 {
+.lab-main .home-grid-item h3 {
   font-family: "Sintony", sans-serif;
   font-weight: 300;
   font-size: 1.75vw;
 }
 
-main .home-grid-item p {
+.lab-main .home-grid-item p {
   font-family: "Cantarell";
   font-size: 1vw;
 }
 
-main .home-grid-item a {
+.lab-main .home-grid-item a {
   font-family: "Cantarell";
   padding: 10px;
   text-decoration: none;
@@ -141,7 +142,7 @@ main .home-grid-item a {
   text-align: center;
 }
 
-main .home-grid-item .skills {
+.lab-main .home-grid-item .skills {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -149,14 +150,14 @@ main .home-grid-item .skills {
   grid-gap: 0 30px;
 }
 
-main .home-grid-item .skills p {
+.lab-main .home-grid-item .skills p {
   background-color: #F4A261;
   text-align: center;
   padding: 1vh 0;
   border-radius: 30px;
 }
 
-main .home-grid-item .links {
+.lab-main .home-grid-item .links {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: max-content max-content;
@@ -165,7 +166,7 @@ main .home-grid-item .links {
   grid-gap: 5px;
 }
 
-main .home-grid-item .links a {
+.lab-main .home-grid-item .links a {
   background-color: #2A9D8F;
   border-radius: 30px;
   height: -webkit-min-content;
@@ -197,5 +198,59 @@ main .home-grid-item .links a {
 footer h1 {
   text-align: right;
   margin-right: 3em;
+}
+
+.title-heading {
+  margin-top: 10vh;
+  margin-left: 3vw;
+  height: 40vh;
+}
+
+#main {
+  background-color: #E9C46A;
+  width: 106%;
+  margin: 0 -3%;
+  padding: 5vh 10vw;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main div {
+  width: 70vw;
+  padding: 10vh 10vw;
+}
+
+#main h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + (30 - 10) * ((100vw - 300px) / (1600 - 300)));
+  margin-top: 0;
+  color: #1d3557;
+}
+
+#main p {
+  font-family: "Cantarell";
+}
+
+#main .odd {
+  padding: 3vh 0vw;
+}
+
+.readmore-main:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #E9C46A;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
 }
 /*# sourceMappingURL=lab.css.map */
