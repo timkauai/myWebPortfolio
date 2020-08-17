@@ -47,8 +47,7 @@ class PageContent {
     var introOneLines = {
       line1: "I am only 18 years old.",
       line2: "Born and Raised on Kauai, Hawaii.",
-      line3: "I graduted from Island School.",
-      line4: "I plan on attending Santa Clara University to major in Finance.",
+      line3: "I am attending Santa Clara University and majoring in Finance.",
     };
     this.meIntroOne = introOneLines;
     let introOneDiv = document.createElement("div");
@@ -68,9 +67,9 @@ class PageContent {
   }
   createMeIntroTwo() {
     var introTwo = {
-      line1: "I write code from a designers perspective: to look good",
+      line1: "I write pixel perfect code to work on any device",
       line2: "I try to learn something new with every build",
-      line3: "Turing a design into an actual product is the best part of coding",
+      line3: "I am always looking for a new project",
     };
     this.meIntroTwo = introTwo;
     let introTwoDiv = document.createElement("div");
