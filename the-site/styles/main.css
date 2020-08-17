@@ -7,7 +7,7 @@ body {
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: calc(35px + (100 - 40) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(30px + (100 - 40) * ((100vw - 300px) / (1600 - 375)));
   margin-top: 0;
   color: #1d3557;
 }
@@ -15,7 +15,7 @@ h1 {
 h3 {
   font-family: "Sintony", sans-serif;
   font-weight: 300;
-  font-size: calc(25px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(25px + (80 - 30) * ((100vw - 300px) / (1600 - 375)));
   color: #1d3557;
 }
 
@@ -136,6 +136,12 @@ div {
   color: #e9c46a;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 780px) {
+  .level2 {
+    margin-top: -15%;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .level2 {
     height: 30vh;
@@ -167,11 +173,8 @@ div {
     display: grid;
     -ms-grid-columns: 34vw 12vw 6vw;
         grid-template-columns: 34vw 12vw 6vw;
-    -ms-grid-rows: 11vh 11vh 11vh;
-        grid-template-rows: 11vh 11vh 11vh;
     grid-gap: 2vw;
     padding: 5vh 5vw;
-        grid-template-areas: "sec1 sec1 sec1 sec2" "sec3 nil sec4 sec4" "sec5 sec5 empty empty";
     padding: 0;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
@@ -242,17 +245,18 @@ div {
   }
   .level2 div {
     background-color: lightgreen;
-    width: 25vw;
-    height: 25vw;
+    width: 50vw;
+    height: 50vw;
     border-radius: 50%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-top: -10%;
+    margin-top: 10%;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: pic;
-    margin-left: 36.5vw;
+    margin-left: 25vw;
+    margin-bottom: 50px;
   }
   .level2 h3 {
     width: 100%;
@@ -261,39 +265,37 @@ div {
     -ms-grid-column: 1;
     grid-area: txt;
     text-align: center;
+    margin-top: 30px;
   }
   .level3 {
     margin-top: 20px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 34vw 12vw 6vw;
-        grid-template-columns: 34vw 12vw 6vw;
-    -ms-grid-rows: 11vh 11vh 11vh 11vh 11vh;
-        grid-template-rows: 11vh 11vh 11vh 11vh 11vh;
-    grid-gap: 2vw;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 7vh 7vh 7vh 7vh 7vh;
+        grid-template-rows: 7vh 7vh 7vh 7vh 7vh;
+    grid-gap: 20px;
         grid-template-areas: "sec1 sec1 sec1" "sec2 sec2 sec2" "sec3 sec3 sec3" "sec4 sec4 sec4" "sec5 sec5 sec5";
     padding: 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-right: 4vw;
-    margin-bottom: 2vw;
+    margin-top: 10vh;
+    margin-left: 4vw;
   }
   .level3 a {
     background-color: #a8dadc;
     color: #1d3557;
     border-radius: 65px;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    text-decoration: none;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    text-decoration: none;
     text-align: center;
   }
   .level3 a h5 {
-    font-size: calc(10px + (50 - 30) * ((100vw - 300px) / (600 - 300)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 375px) / (600 - 375)));
     margin: 0;
     margin-top: 10px;
     font-weight: 500;
@@ -330,6 +332,34 @@ div {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: sec5;
+  }
+  .level3 .sec6 {
+    margin-right: 10vw;
+    margin-bottom: 10vh;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 1200px) {
+  .level2 div {
+    margin-top: 25%;
+  }
+  .level2 h3 {
+    margin-top: 25%;
+  }
+  .level3 {
+    margin-top: 15vh;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 1200px) {
+  .level3 {
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (min-width: 757px) and (max-width: 1200px) {
+  .level3 {
+    margin-top: 25vh;
   }
 }
 
