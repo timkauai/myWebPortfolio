@@ -89,11 +89,10 @@ class PageContent {
   }
   createSkills() {
     var skills = {
-      one: ["HTML", "95%"],
-      two: ["CSS and Sass", "85%"],
-      three: ["UI and UX Design", "70%"],
-      four: ["JavaScript", "70%"],
-      five: ["React.js", "50%"],
+      one: ["HTML, CSS (and Sass)"],
+      two: ["Javascript (including React.js and a bit of node.js)"],
+      three: ["UI and UX Design"],
+      four: ["Python and a bit of C"],
     };
     this.skills = skills;
     let skillsDiv = document.createElement("div");
@@ -119,14 +118,14 @@ class PageContent {
   }
   createJobExp() {
     let jobExp = {
-      job1: "Hokuala <br> Cart Boy. <br> I learned a bunch about hospitality and treating the customers that come to play golf.",
-      job2: "Nalukai <br> Entrepreneur. <br> Nalukai is not exactly a job, but I was an Entrepreneur and learned about working with other coder and I learned a bunch about business. This camp changed my life.",
+      job1: "<b>Hokuala <br> Cart Boy.</b> <br> I learned a bunch about hospitality and treating the customers that come to play golf.",
+      job2: "<b>Nalukai <br> Camp Attendee.</b> <br> I attended Nalukai Academy where I learned about working with other coders and starting a startup. This camp changed my life.",
     };
     this.jobExp = jobExp;
     let jobExpDiv = document.createElement("div");
     jobExpDiv.className = "job-exp-div";
     let heading = document.createElement("h3");
-    heading.innerHTML = "My Work Experience:";
+    heading.innerHTML = "Experience:";
     heading.className = "heading";
     jobExpDiv.appendChild(heading);
     let headingUnderline = document.createElement("div");
