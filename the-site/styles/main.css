@@ -379,7 +379,7 @@ nav .homeLink {
   background-color: #f2a5a4;
   margin-top: 4vh;
   margin-left: 3vw;
-  font-size: 30px;
+  font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 375)));
   font-family: "Sintony", sans-serif;
   text-decoration: none;
   color: #1d3557;
