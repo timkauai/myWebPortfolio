@@ -146,7 +146,7 @@ class PageContent {
   }
   createMyProjects() {
     let projects = {
-      proj1: "Randevu <br> <br> A MeetUp Platform for kickstarting a new lifestyle",
+      proj1: "",
       proj2: "Lab <br> <br> A part of this site that has all of my small side-projects."
     };
     this.myProjects = projects;
